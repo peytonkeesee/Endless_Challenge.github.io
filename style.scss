@@ -1,0 +1,137 @@
+$font-stack: 'Lato', sans-serif; 
+$turquoise: turquoise; 
+$nav-color: #363D4F;
+$white-text: white;
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+
+
+body{
+    font: 100% $font-stack;
+    margin: 0;
+    height: 100%;
+}
+
+.nav{
+background-color: $nav-color;
+height: 50px;
+    img{
+        filter: invert(81%) sepia(74%) saturate(423%) hue-rotate(103deg) brightness(92%) contrast(89%);
+        width: 150px;
+        height: 50px;
+        padding-left: 15%;
+        // height: 25px;
+        // position: relative; 
+        // left: 15%;
+        // top: 12;
+     }        
+}
+.hero {
+    color: $white-text;
+    background: url("photo-couch.jpg") 50% no-repeat;
+    background-size: cover;
+    min-width: 100%;
+    height: 100%;
+    -ms-flex-align: center;
+            align-items: center;
+    display: flex;
+    -ms-flex-pack: center;
+   
+    .content{
+        top: 25;
+        left: 15%;
+        color: white;
+        position: relative;
+        float: left;
+    }
+    h4{
+        font-size: 28px;
+        font-weight: lighter;
+        margin-bottom: .75em
+    
+    }
+    h2{
+        font-size: 48px; 
+        font-weight: lighter;
+        margin-top: 0.5em;
+        margin-bottom: 0;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+    p{
+        max-width: 450px; 
+        font-size: 16px;
+    }
+
+    btn{
+        background-color: turquoise;
+        text-align: center;
+        padding: 10px 50px;
+        position: relative;
+        border: none;
+        font-size: 14px;
+        border-radius: 24px;
+        text-transform: uppercase;
+        font-weight: 650;
+        display: block;
+        overflow: hidden; 
+        color: black;
+        max-width: 100px;
+    }
+    
+}
+
+.parent-wrapper {
+    background-color: lightgray;
+    height: auto;
+    position:relative;
+    top: -25px;
+    margin:0px;
+ 
+
+    h2 {
+        padding-bottom: 15px;
+        padding-top: 15px;
+        letter-spacing: 3px;
+        font-weight: lighter;
+        text-align: center;
+    }
+ 
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 250px);
+        grid-auto-rows: auto;
+        grid-gap: 35px;
+        padding-left: 15%;
+        padding-right: 15%;
+        }
+        .card {
+        /* border: 2px solid black; */
+        width: auto;
+        /* border-radius: 4px; */
+        height: auto;
+        text-align: center;
+        }
+
+        h3 { display:inline;
+        border-bottom: turquoise 3px solid;
+        font-size: 48px;
+        font-weight: 10;
+        }
+        p{
+            font-size: 16px;
+        }
+}
+
+
+
